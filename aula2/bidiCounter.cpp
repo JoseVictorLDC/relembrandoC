@@ -28,6 +28,14 @@ void MyBiDiCounter::decrement()
         counter = max;
 }
 
+void MyBiDiCounter::increment(unsigned value)
+{
+    if(counter + value <= max)
+        counter = counter + value
+    else
+        counter = (counter + value) % max
+}
+
 void MyBiDiCounter::print() const
 {
     std::cout << "Counter: " << counter << " Max: " << max << std::endl;

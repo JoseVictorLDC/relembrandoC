@@ -12,6 +12,7 @@ public:
     MyBiDiCounter(const MyBiDiCounter& anotherCounter);
 
     void decrement();
+    void increment(unsigned value);
     void print() const;
 };
 
